@@ -8,6 +8,27 @@
 </head>
 <body>
     <h1>Test</h1>
-    <?php echo"test"; ?>
+    <p>
+        <?php echo date('d/m/y h:i:s');
+
+        // commentaire mono-ligne
+
+        /*
+        commentaire
+        multi-ligne
+        */
+        $age = 22;
+        ?>
+
+        <p>
+            <?php 
+
+                    echo $age;
+                    echo "Le visiteur à $age ans";
+                    echo 'Le visiteur à' . $age . " ans";
+
+            ?>
+        </p>
+    </p>
 </body>
 </html>
