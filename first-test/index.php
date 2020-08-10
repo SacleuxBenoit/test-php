@@ -18,16 +18,49 @@
         multi-ligne
         */
         $age = 22;
+        echo $age;
         ?>
 
         <p>
             <?php 
-
-                    echo $age;
                     echo "Le visiteur à $age ans";
                     echo 'Le visiteur à' . $age . " ans";
 
+                    if($age >= 18){
+                        $message = "vous pouvez entrer";
+                    }else{
+                        $message = "vous ne pouvez pas entrer";
+                    }
+
+                echo $message;
+
+                $code = 20;
+                if($code == 20){
+                    {
+
+                   
+                }
             ?>
+            <p>Ceci est un test pour afficher du text avec un if() en dehors du PhP</p>
+            <?php
+             }
+            $name = array ('Benoît', 'Charlotte', 'Gérard');
+            
+            echo $name[1];
+
+            $newArray = array(
+                'name' => "Benoît",
+                'adresse' => "Mars",
+                'age' => 22,
+            );
+
+            echo $newArray['adresse'];
+
+            for($i = 0; $i < 3; $i++){
+                echo $name[$i] . '<br />';
+            };
+            ?>
+             
         </p>
     </p>
 </body>
