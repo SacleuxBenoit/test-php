@@ -24,6 +24,24 @@
     $dog = "chien";
     $shuffleDog = str_shuffle($dog);
     echo $shuffleDog; // mélange les lettres
+
+    // strtolower && strtoupper
+
+    $textUpper = "UN TEXTE EN MAJSCULE";
+    $lowerText = strtolower($textUpper);
+    echo $lowerText;
+
+    $textlower = "un texte en minuscule";
+    $upperText = strtoupper($textlower);
+    echo $upperText;
+
+    // date
+
+    $year = date('yy');
+    echo $year;
+
+    $date = date('d/m/y');
+    echo $date;
     ?>
 
     
