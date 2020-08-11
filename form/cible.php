@@ -7,8 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Bienvenue <?php echo $_POST['pseudo'] ?>
+    <p>Bienvenue <?php echo $_POST['pseudo']; ?>
     tu peut modifier ton pseudo en cliquant <a href="index.php">ici</a>
     </p>
+
+    <p>Voici votre commentaire : <?php echo $_POST['message']; ?></p>
 </body>
 </html>
