@@ -18,9 +18,17 @@
         <label>votre commentaire : <br/>
             <textarea name="message" rows="8" cols="45">
             </textarea>
-            <input type="submit" value="Valider"/>
         </label>
     </p>
+
+    <p>
+        <select name="country">
+            <option>France</option>
+            <option>U.S.A</option>
+            <option>Belgique</option>
+        </select>
+    </p>
+    <input type="submit" value="Valider"/>
       </form>
 </body>
 </html>
