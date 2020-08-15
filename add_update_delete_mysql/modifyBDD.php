@@ -24,9 +24,10 @@
     $bdd->exec('INSERT INTO jeux_video(nom, possesseur, console, prix, nbre_joueurs_max, commentaires)
             VALUES(\'World of warcraft\', \'Benoît\', \'PC\', 45, 999, \'Un jeu incontournable\')');
 
-        // Modifier
+        // UPDATE
 
-
+    $bdd->exec('UPDATE jeux_video SET prix = 13 WHERE nom = \'World of warcraft\'')
+    
     ?>
 </body>
 </html>
