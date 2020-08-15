@@ -9,7 +9,9 @@
 </head>
 <body>
     <?php
-    
+
+    // Créer
+
     try
     {
         $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', $_SESSION['pass']);
@@ -18,6 +20,12 @@
     {
             die('Erreur : '.$e->getMessage());
     }
+
+    $bdd->exec('INSERT INTO jeux_video(nom, possesseur, console, prix, nbre_joueurs_max, commentaires)
+            VALUES(\'World of warcraft\', \'Benoît\', \'PC\', 45, 999, \'Un jeu incontournable\')');
+
+        // Modifier
+
 
     ?>
 </body>
