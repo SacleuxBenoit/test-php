@@ -9,8 +9,7 @@
 </head>
 <body>
     <?php
-    echo $_SESSION['pass'];
-    echo $_SESSION['aze'];
+    
     try
     {
         $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', $_SESSION['pass']);
