@@ -26,8 +26,11 @@
 
         // UPDATE
 
-    $bdd->exec('UPDATE jeux_video SET prix = 13 WHERE nom = \'World of warcraft\'')
+    $bdd->exec('UPDATE jeux_video SET prix = 13 WHERE nom = \'World of warcraft\'');
+
+        // DELETE
     
+    $bdd->exec('DELETE FROM jeux_video WHERE id > 51')
     ?>
 </body>
 </html>
