@@ -38,11 +38,20 @@ session_start();
         echo $result['length_nom'] . '<br />';
     }
 
+
     echo "average price" . '<br />';
 
     $average = $bdd->query('SELECT AVG(prix) AS AVG_price FROM jeux_video');
     $resultAVG = $average->fetch();
     echo "le prix moyen des jeux est de : " . $resultAVG['AVG_price'] . " Euros";
+
+
+    echo "SUM for the price of every game" . '<br />';
+
+    $SUMprice = $bdd->query('SELECT SUM(prix) AS SUM_price FROM jeux_video');
+    $resultSUM = $SUMprice->fetch();
+    echo "le prix total de tous les jeux est de : " .$resultSUM['SUM_price'] . " Euros.";
+
     ?>
     
    
