@@ -37,6 +37,12 @@ session_start();
     while($result = $length->fetch()){
         echo $result['length_nom'] . '<br />';
     }
+
+    echo "average price" . '<br />';
+
+    $average = $bdd->query('SELECT AVG(prix) AS AVG_price FROM jeux_video');
+    $resultAVG = $average->fetch();
+    echo "le prix moyen des jeux est de : " . $resultAVG['AVG_price'] . " Euros";
     ?>
     
    
