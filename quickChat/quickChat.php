@@ -35,7 +35,7 @@ catch (Exception $e)
         die('Erreur : ' . $e->getMessage());
 }
 
-$reponse = $bdd->query('SELECT pseudo, message FROM chat');
+$reponse = $bdd->query('SELECT pseudo, message FROM chat ORDER BY ID LIMIT 0, 10');
 
 while($donnees = $reponse->fetch()){
     echo '<p><strong>' . htmlspecialchars($donnees['pseudo']) . '</strong> : '
