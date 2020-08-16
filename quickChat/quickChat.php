@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,22 +10,40 @@
 </head>
 <body>
 
-<form method="post" action="quickChat_post.php">
+<form action="quickChat_post.php"  method="post" >
     <p>
-        <label for="username" name="username">Username
-            <input type="text" id="username" name="username">
-        </label>
+        <label for="pseudo">Pseudo </label>
+        <input type="text" id="pseudo" name="pseudo">
     </p>
-
     <p>
-        <label for="message">Message
-            <input type="text" id="message">
-        </label>
+        <label for="message">Message </label>
+        <input type="text" id="message" name="message">
     </p>
 
     <p>
         <input type="submit" value="Envoyer">
     </p>
+</form>
+<?php 
+
+try
+{
+	$bdd = new PDO('mysql:host=localhost;dbname=quickChat;charset=utf8', 'root', $_SESSION['pass']);
+}
+catch (Exception $e)
+{
+        die('Erreur : ' . $e->getMessage());
+}
+
+$reponse = $bdd->query('SELECT pseudo, message FROM chat');
+
+while($donnees = $reponse->fetch()){
+    echo '<p><strong>' . htmlspecialchars($donnees['pseudo']) . '</strong> : '
+                       . htmlspecialchars($donnees['message']) . '</p>';
+}
+
+$reponse->closeCursor();
+?>
 </form>
 </body>
 </html>
