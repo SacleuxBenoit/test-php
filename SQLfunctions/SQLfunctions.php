@@ -21,12 +21,22 @@ session_start();
         die("Error :" .$e->getMessage());
     }
     
-    $reponse = $bdd->query('SELECT upper(nom) AS name_maj FROM jeux_video');
+    echo "partie upper case :" . '<br />';
 
-    while($donnees = $reponse->fetch()){
+    $upper = $bdd->query('SELECT upper(nom) AS name_maj FROM jeux_video WHERE ID <=5');
+
+    while($donnees = $upper->fetch()){
         echo $donnees['name_maj'] . '<br/>';
     }
     
+
+    echo "partie length" . '<br />';
+
+    $length = $bdd->query('SELECT LENGTH(nom) AS length_nom FROM jeux_video WHERE ID <= 5');
+    
+    while($result = $length->fetch()){
+        echo $result['length_nom'] . '<br />';
+    }
     ?>
     
    
