@@ -61,14 +61,25 @@ session_start();
     echo "le prix total de tous les jeux est de : " .$resultSUM['SUM_price'] . " Euros.";
 
 
-    // SUM for the price of every game for each console
+    // AVG for the price of every game for each console
 
-    echo "SUM for the price of every game for each console" . '<br />';
+    echo "AVG for the price of every game for each console" . '<br />';
 
     $average_price_game = $bdd->query('SELECT AVG(prix) AS AVG_price_game_console, console FROM jeux_video GROUP BY console');
     while($result_price_game_console = $average_price_game->fetch()){
         echo "La moyenne des prix pour la console " . $result_price_game_console['console'] . " est de " . $result_price_game_console['AVG_price_game_console'] . " euros." .'<br />';
     }
+
+
+    // SUM for the price of every game for each console
+
+    echo "SUM for the price of every game for each console";
+
+    $total_price_game_console = $bdd->query('SELECT SUM(prix) AS price_game_console, console FROM jeux_video GROUP BY console');
+    while($total_price_game = $total_price_game_console->fetch()){
+        echo "Le prix total pour la console " . $total_price_game['console'] . " est de : " . $total_price_game['price_game_console'] . " euros." . '<br />';
+    }
+
     ?>
     
    
