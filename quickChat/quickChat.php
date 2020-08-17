@@ -35,11 +35,12 @@ catch (Exception $e)
         die('Erreur : ' . $e->getMessage());
 }
 
-$reponse = $bdd->query('SELECT pseudo, message FROM chat ORDER BY ID LIMIT 0, 10');
+$reponse = $bdd->query('SELECT pseudo, message, date_creation FROM chat ORDER BY ID LIMIT 0, 10');
 
 while($donnees = $reponse->fetch()){
     echo '<p><strong>' . htmlspecialchars($donnees['pseudo']) . '</strong> : '
-                       . htmlspecialchars($donnees['message']) . '</p>';
+                       . htmlspecialchars($donnees['message']) . '</p>' . "posté le : "
+                       . htmlspecialchars($donnees['date_creation']);
 }
 
 $reponse->closeCursor();
