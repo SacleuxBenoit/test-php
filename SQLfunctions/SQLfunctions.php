@@ -21,6 +21,8 @@ session_start();
         die("Error :" .$e->getMessage());
     }
     
+    // Uppercase 
+
     echo "partie upper case :" . '<br />';
 
     $upper = $bdd->query('SELECT upper(nom) AS name_maj FROM jeux_video WHERE ID <=5');
@@ -29,6 +31,8 @@ session_start();
         echo $donnees['name_maj'] . '<br/>';
     }
     
+
+    // Length
 
     echo "partie length" . '<br />';
 
@@ -39,6 +43,8 @@ session_start();
     }
 
 
+    // average price
+
     echo "average price" . '<br />';
 
     $average = $bdd->query('SELECT AVG(prix) AS AVG_price FROM jeux_video');
@@ -46,12 +52,23 @@ session_start();
     echo "le prix moyen des jeux est de : " . $resultAVG['AVG_price'] . " Euros";
 
 
+    // sum for the price of every game
+
     echo "SUM for the price of every game" . '<br />';
 
     $SUMprice = $bdd->query('SELECT SUM(prix) AS SUM_price FROM jeux_video');
     $resultSUM = $SUMprice->fetch();
     echo "le prix total de tous les jeux est de : " .$resultSUM['SUM_price'] . " Euros.";
 
+
+    // SUM for the price of every game for each console
+
+    echo "SUM for the price of every game for each console" . '<br />';
+
+    $average_price_game = $bdd->query('SELECT AVG(prix) AS AVG_price_game_console, console FROM jeux_video GROUP BY console');
+    while($result_price_game_console = $average_price_game->fetch()){
+        echo "La moyenne des prix pour la console " . $result_price_game_console['console'] . " est de " . $result_price_game_console['AVG_price_game_console'] . " euros." .'<br />';
+    }
     ?>
     
    
