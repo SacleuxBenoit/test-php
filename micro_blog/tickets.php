@@ -11,20 +11,28 @@ session_start();
 </head>
 <body>
 
-    <form method="post" action="blog.php">
-        <p>
-            <label for="titre">Pseudo</label>
-            <input type="text" name="titre" id="titre">
-        </p>
+<form action="add_database.php" method="post" >
+    <p>
+        <label for="titre">Titre</label>
+        <input type="text" id="titre" name="titre">
+    </p>
+    <p>
+        <label for="contenu">Contenu</label>
+        <input type="text" id="contenu" name="contenu">
+    </p>
 
-        <p>
-            <label for="contenu">Contenu</label>
-            <input type="text" name="contenu" id="contenu">
-        </p>
+    <p>
+        <input type="submit" value="Envoyer">
+    </p>
+</form>
 
-        <p>
-        <input type="button" value="Valider">
-        </p>
-    </form>
+   <?php 
+    
+    try{
+        $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', "root", $_SESSION['pass']);
+    }catch(Exception $e){
+        die('Erreur : ' . $e->getcontenu());
+    }
+    ?>
 </body>
 </html>
