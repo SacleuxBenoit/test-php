@@ -9,9 +9,11 @@ catch(Exception $e)
 {
         die('Erreur : '.$e->getMessage());
 }
-
-$req = $bdd->prepare('INSERT INTO chat (pseudo, message) VALUES(?, ?)');
-$req->execute(array($_POST['pseudo'], $_POST['message']));
+if(isset($pseudo)){
+        $req = $bdd->prepare('INSERT INTO chat (pseudo, message) VALUES(?, ?)');
+        $req->execute(array($_POST['pseudo'], $_POST['message']));
+        
+}
 
 header('Location: quickChat.php');
 ?>
