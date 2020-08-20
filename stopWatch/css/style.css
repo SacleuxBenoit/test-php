@@ -1,0 +1,12 @@
+body{
+    text-align: center;
+}
+
+h1{
+    font-size: 5rem;
+}
+
+button{
+    width: 10rem;
+    height: 10rem;
+}
