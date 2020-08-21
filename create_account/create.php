@@ -12,7 +12,7 @@ session_start();
 <body>
 
     <div>
-        <form action="hello.php" method="post">
+        <form action="add_database.php" method="post">
             <p>
                 <label for="last_name">Last name</label>
                 <input type="text" name="last_name" id="last_name">
@@ -38,17 +38,5 @@ session_start();
         </form>
     </div>
 
-
-
-
-
-    <?php 
-    try{
-        $bdd = new PDO("mysql:host=localhost;dbname=testAccount;charset=utf8", "root", $_SESSION['pass']);
-    }
-    catch(Exception $e){
-        die('Erreur : '.$e->getMessage());
-    }
-    ?>
 </body>
 </html>
