@@ -20,17 +20,22 @@ catch(Exception $e){
     die('Erreur : '.$e->getMessage());
 }
 
+if(empty($_POST['classe']) || empty($_POST['race']) || empty($_POST['pseudo'])){
+    echo "Tous les champs n'ont pas été renseigné";
+}
+else{
 $inser = $bdd->prepare('INSERT INTO info (classe, race, pseudo) VALUES(:classe, :race, :pseudo)');
-$inser->bindParam(':classe', $_POST['classe']);
-$inser->bindParam(':race',  $_POST['race']);
-$inser->bindParam(':pseudo', $_POST['pseudo']);
-$inser->execute();
+    $inser->bindParam(':classe', $_POST['classe']);
+    $inser->bindParam(':race',  $_POST['race']);
+    $inser->bindParam(':pseudo', $_POST['pseudo']);
+    $inser->execute();
+    
+        echo "Vous venez d'enregistrer dans la base de données : " . '<br />' . "<strong>Classe</strong> : "
+        . htmlspecialchars($_POST['classe']) . '<br />' . "<strong>Race</strong> : "
+        . htmlspecialchars($_POST['race']) . '<br />' . "<strong>Pseudo</strong> : "
+        . htmlspecialchars($_POST['pseudo']) . '<br />';
+}
 
-
-echo "Vous venez d'enregistrer dans la base de données : " . '<br />' . "<strong>Classe</strong> : "
-    . htmlspecialchars($_POST['classe']) . '<br />' . "<strong>Race</strong> : "
-    . htmlspecialchars($_POST['race']) . '<br />' . "<strong>Pseudo</strong> : "
-    . htmlspecialchars($_POST['pseudo']) . '<br />'
     ?>
 </body>
 </html>
