@@ -11,7 +11,7 @@ session_start();
 </head>
 <body>
 
-<form method="post" action="prepared_Statement.php">
+<form method="post" action="result_prepared_Statement.php">
     <p>
         <label for="classe">Classe</label>
         <input type="text" id="classe" name="classe">
@@ -34,7 +34,7 @@ session_start();
 
 
 <?php
-try{
+/*try{
     $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', $_SESSION['pass']);
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -53,7 +53,7 @@ $classe = "hunter";
 $race = "Eds";
 $pseudo = "Totor";
 $inser->execute();
-echo "La requête a été envoyée";
+echo "La requête a été envoyée";*/
 ?>
 
 </body>
