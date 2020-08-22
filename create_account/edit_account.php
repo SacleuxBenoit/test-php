@@ -11,21 +11,23 @@ session_start();
     <title>Document</title>
 </head>
 <body>
-    <form method="post" action="edit_account.php">
+    <form method="post" action="edit_account_bdd.php">
         <p>
-            <label for="last_name">Nom</label>
-                <input id="last_name" name="last_name" value="<?php echo $_SESSION['last_name']?>">
+            <label for="last_name">Nom :</label>
+                <input type="text" id="last_name" name="last_name" value="<?php echo $_SESSION['last_name']?>">
         </p>
 
         <p>
-            <label for="first_name">Prénom</label>
-                <input id="first_name" name="first_name" value="<?php echo $_SESSION['first_name']?>">
+            <label for="first_name">Prénom :</label>
+                <input type="text" id="first_name" name="first_name" value="<?php echo $_SESSION['first_name']?>">
         </p>
 
         <p>
-            <label for="email">email</label>
-                <input id="email" name="email" value="<?php echo $_SESSION['email']?>">
+            <label for="email">Email :</label>
+                <input type="text"id="email" name="email" value="<?php echo $_SESSION['email']?>">
         </p>    
+
+            <input type="submit" value="submit"> 
     </form>
 
 </body>
