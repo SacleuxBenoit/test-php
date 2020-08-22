@@ -18,5 +18,11 @@ session_start();
         <p>Email : <?php echo $_SESSION['email'] ?></p>
         <p>Si vous voulez modifier vos informations merci de vous rendre sur <a href="edit_account.php">cette page</a></p>
     </div>
+    <?php 
+
+    if($_SESSION['password'] != $_SESSION['passwordConfirm']){
+        header('Location: create.php');
+    }
+    ?>
 </body>
 </html>
