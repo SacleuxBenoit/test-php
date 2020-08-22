@@ -4,6 +4,8 @@ session_start();
 $_SESSION['last_name'] = $_POST['last_name'];
 $_SESSION['first_name'] = $_POST['first_name'];
 $_SESSION['email'] = $_POST['email'];
+$_SESSION['password'] = $_POST['password'];
+$_SESSION['passwordConfirm'] = $_POST['passwordConfirm'];
 
 try{
     $bdd = new PDO("mysql:host=localhost;dbname=testAccount;charset=utf8", "root", $_SESSION['pass']);
