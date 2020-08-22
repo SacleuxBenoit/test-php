@@ -35,8 +35,13 @@ include("hide.php");
                 <input type="password" name="password" id="password">
             </p>
 
+            <p>
+                <label for="passwordConfirm">Confirm Password</label>
+                <input type="password" name="passwordConfirm" id="passwordConfirm">
+            </p>
+
                 <input type="submit" value="Validate">
-                
+
         </form>
     </div>
 
