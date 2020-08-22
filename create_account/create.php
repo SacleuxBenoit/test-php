@@ -1,5 +1,6 @@
 <?php
 session_start();
+include("hide.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
