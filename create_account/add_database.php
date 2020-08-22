@@ -1,6 +1,8 @@
 <?php 
 session_start();
 
+$_SESSION['last_name'] = $_POST['last_name'];
+
 try{
     $bdd = new PDO("mysql:host=localhost;dbname=testAccount;charset=utf8", "root", $_SESSION['pass']);
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
