@@ -10,6 +10,21 @@ session_start();
     <title>Document</title>
 </head>
 <body>
+    <div>
+        <form action="new_data.php" method="post">
+            <p>
+                <label for="edit_name">Nom :</label>
+                <input type="text" name="edit_name" id="edit_name" value="<?php echo $_POST['name'] ?>">
+            </p>
+
+            <p>
+                <label for="edit_username">Pseudo :</label>
+                <input type="text" name="edit_username" id="edit_username" value="<?php echo $_POST['username'] ?>">
+            </p>
+
+                <input type="submit" value="submit">
+        </form>
+    </div>
 
     <?php 
         try
@@ -25,6 +40,7 @@ session_start();
         $add_data->bindParam(':nom', $_POST['name']);
         $add_data->bindParam(':username', $_POST['username']);
         $add_data->execute();
+
     ?>
 
 </body>
