@@ -11,7 +11,7 @@ session_start();
 </head>
 <body>
     <div>
-        <form action="new_data.php" method="post">
+        <form action="change_name.php" method="post">
             <p>
                 <label for="edit_name">Nom :</label>
                 <input type="text" name="edit_name" id="edit_name" value="<?php echo $_POST['name'] ?>">
