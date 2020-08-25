@@ -14,3 +14,6 @@
 *   [micro blog](micro_blog)
 *   [mysql/php](mysql_php)
 *   [quick chat](quick_chat)
+*   [jointures](jointures)
+*   [create account](create_account)
+*   [Data retrieval form database](data_retrieval_from_database)
