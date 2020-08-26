@@ -72,5 +72,29 @@
     }
     ?>
 </p>
+
+            <!-- classe de caractères -->
+
+<p>
+    <?php
+        if(preg_match("#gr[iao]#", "Le chat est gris")){
+            echo "C'est good";
+        }else{
+            echo "C'est pas good" ;
+        }
+    ?>
+</p>
+
+            <!-- Intervalles de classe -->
+
+<p>
+    <?php
+        if(preg_match("#[7-9]#", "vous avez eu un 8")){
+            echo "Le résultat est bon.";
+        }else{
+            echo "Le résultat est insufisant." ;
+        }
+    ?>
+</p>
 </body>
 </html>
