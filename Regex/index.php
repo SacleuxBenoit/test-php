@@ -96,5 +96,39 @@
         }
     ?>
 </p>
+
+            <!-- ne peut prendre en compte un intervalle de classe -->
+
+<p>
+    <?php
+        if(preg_match("#[^0-9]#", "vous avez eu un 8")){
+            echo "Le résultat est bon.";
+        }else{
+            echo "Le résultat est insufisant." ;
+        }
+    ?>
+</p>
+
+            <!-- Quantificateurs -->
+
+<p>
+    <?php
+        if(preg_match("#7+#", "vous avez eu un 8")){
+            echo "Le résultat est bon.";
+        }else{
+            echo "Le résultat est insufisant." ;
+        }
+    ?>
+</p>
+
+<p>
+    <?php
+        if(preg_match("#bor?is#", "bois")){
+            echo "Il n'y a pas de problème.";
+        }else{
+            echo "un problème est survenue." ;
+        }
+    ?>
+</p>
 </body>
 </html>
