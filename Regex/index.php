@@ -130,5 +130,27 @@
         }
     ?>
 </p>
+
+            <!-- Accolades -->
+
+ <p>
+    <?php
+        if(preg_match("#a{3}#", "aaaaa")){
+            echo "Il y a 3 'a' ou +.";
+        }else{
+            echo "Il y a moins de 3 'a'." ;
+        }
+    ?>
+</p>
+
+<p>
+    <?php
+        if(preg_match("#a{1,3}#", "aaaaaaaaa")){
+            echo "Il y a entre 1 et 3 'a'.";
+        }else{
+            echo "Il y a plus de 3 'a'." ;
+        }
+    ?>
+</p>
 </body>
 </html>
