@@ -152,5 +152,19 @@
         }
     ?>
 </p>
+
+            <!-- Construire un Regex pour les numéros de téléphone -->
+
+
+<p>
+    <?php
+        if(preg_match("#a^0[1-6][0-9]{8}$#", "0120241019")){
+            echo "ça fonctionne.";
+        }else{
+            echo "ça ne fonctionne pas" ;
+        }
+    ?>
+</p>
+
 </body>
 </html>
