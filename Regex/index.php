@@ -158,8 +158,8 @@
 
 <p>
     <?php
-    $num = "0120241019";
-        if(preg_match("#^0[1-6][0-9]{8}$#", $num)){
+    $num = "01-20-24-10-19";
+        if(preg_match("#^0[1-6]([-. ]?[0-9]{2}){4}$#", $num)){
             echo "ça fonctionne.";
         }else{
             echo "ça ne fonctionne pas" ;
