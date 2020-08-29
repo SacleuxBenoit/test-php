@@ -24,15 +24,21 @@ include('hide.php');
     </form>
 
 <?php
+
     if(isset($_POST['phone_number'])){
         $_POST['phone_number'] = htmlspecialchars($_POST['phone_number']);
     }
 
-    if(preg_match("#^0[1-6]([-. ]?[0-9]{2}){4}$#", $_POST['phone_number'])){
-        echo "Le numéro est validé";
+    if(empty($_POST['phone_number'])){
+        echo " ";
     }else{
-        echo "Il y a eu une erreur";
+        if(preg_match("#^0[1-6]([-. ]?[0-9]{2}){4}$#", $_POST['phone_number'])){
+            echo "Le numéro est validé.";
+        }else{
+            echo "Le numéro n'est pas valide.";
+        }
     }
+
 ?>
 </body>
 </html>
