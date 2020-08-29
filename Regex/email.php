@@ -18,14 +18,19 @@
         </p>
     </form>
 
-
-
-
     <?php
-        if(preg_match("#^[a-z0-9.-_]+@[a-z0-9.-_]{2,}\.[a-z]{2,4}$#", "test@test.com")){
-            echo "ok";
+        if(isset($_POST['email'])){
+        $_POST['email'] = htmlspecialchars($_POST['email']);
+        }
+
+        if(empty($_POST['email'])){
+            echo " ";
         }else{
-            echo "pas ok";
+            if(preg_match("#^[a-z0-9.-_]+@[a-z0-9.-_]{2,}\.[a-z]{2,4}$#", $_POST['email'])){
+                echo "L'adresse email est validé.";
+            }else{
+                echo "L'adresse email n'a pas était validé.";
+            }
         }
     ?>
 </body>
