@@ -167,5 +167,17 @@
     ?>
 </p>
 
+            <!-- Capture et remplacement -->
+<p>
+    <?php
+    $texte = "baaab";
+        if(preg_replace('#\[b\](.+)\[/b\]#i', '<strong>$1</strong>', $texte)){
+            echo $texte;
+        }else{
+            echo "pas ok";
+        }
+    ?>
+</p>
+
 </body>
 </html>
