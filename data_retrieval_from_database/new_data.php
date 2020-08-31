@@ -13,13 +13,13 @@ session_start();
     <div>
         <form action="change_name.php" method="post">
             <p>
-                <label for="edit_name">Nom :</label>
-                <input type="text" name="edit_name" id="edit_name" value="<?php echo $_POST['name'] ?>">
+                <label for="edit_name">Modifier le nom :</label>
+                <input type="text" name="edit_name" id="edit_name">
             </p>
 
             <p>
-                <label for="edit_username">Pseudo :</label>
-                <input type="text" name="edit_username" id="edit_username" value="<?php echo $_POST['username'] ?>">
+                <label for="edit_username">Modifier le pseudo :</label>
+                <input type="text" name="edit_username" id="edit_username">
             </p>
 
                 <input type="submit" value="submit">
