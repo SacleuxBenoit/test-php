@@ -35,6 +35,39 @@ include('hide.php');
     $donnees = $recover_tickets->fetch();
 ?>
 
+    <div class="news">
+        <h3>
+            <?php echo htmlspecialchars($donnees['titre']) ?>
+        </h3>
+
+        <p>
+        <?php echo nl2br(htmlspecialchars($donnees['contenu']))?>
+        </p>
+    </div>
+
+    <h2>Commentaires :</h2>
+
+<?php
+    $recover_tickets->closeCursor();
+
+    $recover_comments = $bdd->prepare('SELECT auteur, commentaire, DATE_FORMAT(date_commentaire, \'%d/%m/%Y à %Hh%imin%ss\') AS date_commentaire_fr FROM commentaires WHERE id_billet = ? ORDER BY date_commentaire');
+    $recover_comments->execute(array($_GET['billet']));
+
+    while($donnees = $recover_comments->fetch()){
+        ?>
+            <p>
+                <strong>
+                    <?php echo htmlspecialchars($donnees['auteur'])?>
+                </strong>
+            </p>
+
+            <p>
+                <?php echo nl2br(htmlspecialchars($donnees['commentaire']))?>
+            </p>
+        <?php
+    }
+    $recover_comments->closeCursor();
+?>
 
 </body>
 </html>
