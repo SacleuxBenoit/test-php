@@ -1,3 +1,7 @@
+<?php
+session_start();
+include('hide.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,8 +30,10 @@
             die('Erreur : '.$e->getMessage());
     }
 
+    $recover_tickets = $bdd->prepare('SELECT id, titre, contenu, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation_fr FROM billets WHERE id = ?');
+    $recover_tickets->execute(array($_GET['billet']));
+    $donnees = $recover_tickets->fetch();
 ?>
-
 
 
 </body>
