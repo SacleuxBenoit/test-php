@@ -25,8 +25,13 @@ session_start();
                 die('Erreur : '.$e->getMessage());
         }
 
-        $update_bdd = $bdd->prepare('UPDATE recupData SET name=?, username=? WHERE ID = 26');
-        $update_bdd->execute([$_POST['edit_name'], $_POST['edit_username']]);
+        $update_bdd = $bdd->prepare('UPDATE recupData SET nom= :nom, pseudo= :pseudo WHERE id = :id');
+        $update_bdd->bindParam('nom', $_POST['edit_name']);
+        $update_bdd->bindParam('pseudo', $_POST['edit_username']);
+        $update_bdd->bindParam('id', session_id());
+        $update_bdd->execute();
+
+
     ?>
 </body>
 </html>
