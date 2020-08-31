@@ -24,6 +24,30 @@ include('hide.php');
     {
             die('Erreur : '.$e->getMessage());
     }
+
+    $recover_tickets = $bdd->query('SELECT id, titre, contenu, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation_fr FROM billets ORDER BY date_creation DESC LIMIT 0, 5');
+
+    while($donnees = $recover_tickets->fetch()){
+      ?>
+        <div class="news">
+          <h3>
+            <?php echo htmlspecialchars($donnees['titre']); ?>
+          </h3>
+
+            <p>
+              <?php
+                echo nl2br(htmlspecialchars($donnees['contenu']));
+              ?>
+                <br />
+                  <p>
+                    <em><a href="commentaires.php?billet=<?php echo $donnees['id']; ?>">Commentaires</a></em>
+                  </p>
+            </p>
+        </div>
+
+      <?php
+    }
+    $recover_tickets->closeCursor();
   ?>
 </body>
 </html>
