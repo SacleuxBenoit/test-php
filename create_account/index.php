@@ -14,7 +14,7 @@ include("hide.php");
 <body>
 
     <div>
-        <form action="add_database.php" method="post">
+        <form action="./database/add_profiles_database.php" method="post">
             <p>
                 <label for="last_name">Last name</label>
                 <input type="text" name="last_name" id="last_name">

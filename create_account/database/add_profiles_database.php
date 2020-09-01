@@ -25,6 +25,6 @@ $req_inser->bindParam(':email', $_POST['email']);
 $req_inser->bindParam(':hash_pass', $pass_hash);
 $req_inser->execute();
 
-header('Location: hello.php');
+header('Location: ./../hello.php');
 
 ?>
