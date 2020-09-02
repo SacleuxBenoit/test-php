@@ -16,13 +16,6 @@ session_start();
         <p>Nom : <?php echo $_SESSION['last_name'] ?></p>
         <p>Prénom : <?php echo $_SESSION['first_name'] ?></p>
         <p>Email : <?php echo $_SESSION['email'] ?></p>
-        <p>Si vous voulez modifier vos informations merci de vous rendre sur <a href="edit_account.php">cette page</a></p>
     </div>
-    <?php 
-
-    if($_SESSION['password'] != $_SESSION['passwordConfirm']){
-        header('Location: create.php');
-    }
-    ?>
 </body>
 </html>
