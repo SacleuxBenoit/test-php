@@ -7,6 +7,8 @@ $_SESSION['email'] = $_POST['email'];
 $_SESSION['password'] = $_POST['password'];
 $_SESSION['passwordConfirm'] = $_POST['passwordConfirm'];
 
+// Connection to the database
+
 try{
     $bdd = new PDO("mysql:host=localhost;dbname=testAccount;charset=utf8", "root", $_SESSION['pass']);
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -16,7 +18,9 @@ catch(Exception $e){
     die('Erreur : '.$e->getMessage());
 }
 
-if(empty($_SESSION['last_name'])){
+// Verification if last_name, first_name, email is empty 
+
+if(empty($_SESSION['last_name'] || $_SESSION['first_name'] || $_SESSION['email'])){
     header('Location: ./../index.php');
 }
 else{
@@ -30,7 +34,11 @@ else{
     $req_inser->execute();
     
     header('Location: ./../hello.php');
-    
 }
 
+// Verification if the password are the same or not
+
+if($_SESSION['password'] != $_SESSION['passwordConfirm']){
+    header('Location: ./../index.php');
+}
 ?>
