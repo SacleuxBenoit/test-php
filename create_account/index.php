@@ -45,5 +45,7 @@ include("hide.php");
         </form>
     </div>
 
+    <p>Si vous avez déjà un compte merci de vous rendre <a href="./login.php">ici</a></p>
+
 </body>
 </html>
