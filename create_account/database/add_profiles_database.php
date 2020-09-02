@@ -20,7 +20,7 @@ catch(Exception $e){
 
 // Verification if last_name, first_name, email is empty 
 
-if(empty($_SESSION['last_name'] || $_SESSION['first_name'] || $_SESSION['email'])){
+if(empty($_POST['last_name']) || empty($_POST['first_name']) || empty($_POST['email'])){
     header('Location: ./../index.php');
 }
 else{
@@ -38,7 +38,7 @@ else{
 
 // Verification if the password are the same or not
 
-if($_SESSION['password'] != $_SESSION['passwordConfirm']){
+if($_POST['password'] != $_POST['passwordConfirm']){
     header('Location: ./../index.php');
 }
 ?>
