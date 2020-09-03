@@ -10,14 +10,21 @@ catch(Exception $e){
     die('Erreur : '.$e->getMessage());
 }
 
-$reqConnection = $bdd->query('SELECT * FROM Account ');
-
+$reqConnection = $bdd->query('SELECT email,pass FROM Account WHERE email = :email ');
+$reqConnection->bindParam(':email', $_POST['loginEmail']);
+$reqConnection->execute();
 $donnees = $reqConnection->fetch();
-    
-    if($_POST['loginEmail'] == $donnees['email']){
+
+    /*if($_POST['loginEmail'] == $donnees['email'] && $_POST['loginPassword'] == $donnees['pass']){
         header('Location: ./../home.php');
     }else{
         header('Location: ./../login.php');
     }
+
+    if(password_verify($_POST["loginPassword"],$donnees['pass']))
+    echo "Welcome"; 
+
+    else
+    echo $donnees['pass'];*/
 ?>
 
