@@ -16,16 +16,10 @@ $reqConnection->execute();
 $donnees = $reqConnection->fetch();
 
 
-    if($_POST['loginEmail'] == $donnees['email']){
+    if($_POST['loginEmail'] == $donnees['email'] && password_verify($_POST["loginPassword"],$donnees['pass'])){
         header('Location: ./../home.php');
     }else{
         header('Location: ./../login.php');
     }
-
-    /*if(password_verify($_POST["loginPassword"],$donnees['pass']))
-    echo "Welcome"; 
-
-    else
-    echo $donnees['pass'];*/
 ?>
 
