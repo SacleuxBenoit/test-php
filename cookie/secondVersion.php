@@ -15,7 +15,7 @@
 
         <p>
             <label for="password">password</label>
-            <input type="email" id="password" name="password">
+            <input type="password" id="password" name="password">
         </p>
 
         <input type="submit" value="Submit">
