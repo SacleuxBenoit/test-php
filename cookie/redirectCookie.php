@@ -13,6 +13,7 @@ setcookie('user_email', $_POST['email'], time() + 24 * 3600);
     <?php
     if(isset($_COOKIE['user_email'])){
         echo 'Votre adreesse email est : ' . htmlspecialchars($_COOKIE['user_email']);
+        print_r($_COOKIE); // Affiche tous les cookies
     }else{
         echo "Aucune addresse email n'a était renseignée.";
     }
