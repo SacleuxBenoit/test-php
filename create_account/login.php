@@ -28,5 +28,7 @@ include('hide.php');
 
             <input type="submit" value="Submit">
         </form>
+
+        <p>Si vous n'avez de pas compte merci de <a href="index.php">cliquer ici</a></p>
 </body>
 </html>
