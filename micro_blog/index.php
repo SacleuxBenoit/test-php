@@ -40,7 +40,7 @@ include('hide.php');
               ?>
                 <br />
                   <p>
-                    <em><a href="commentaires.php?billet=<?php echo $donnees['id']; ?>">Commentaires</a></em>
+                    <em><a href="commentaires.php?billet=<?php echo htmlspecialchars($donnees['id']); ?>">Commentaires</a></em>
                   </p>
             </p>
         </div>
