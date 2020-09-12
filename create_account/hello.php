@@ -13,9 +13,9 @@ session_start();
 <body>
     <div>
         <p>Vous venez de vous inscrire avec les identifiants suivants :</p>
-        <p>Nom : <?php echo $_SESSION['last_name'] ?></p>
-        <p>Prénom : <?php echo $_SESSION['first_name'] ?></p>
-        <p>Email : <?php echo $_SESSION['email'] ?></p>
+        <p>Nom : <?php echo htmlspecialchars($_SESSION['last_name']) ?></p>
+        <p>Prénom : <?php echo htmlspecialchars($_SESSION['first_name']) ?></p>
+        <p>Email : <?php echo htmlspecialchars($_SESSION['email']) ?></p>
     </div>
 </body>
 </html>
