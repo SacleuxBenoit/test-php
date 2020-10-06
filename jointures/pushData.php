@@ -19,5 +19,19 @@
 
             <input type="submit" value="Submit">
     </form>
+
+    <form action="addToJeux.php" method="post">
+        <p>
+            <label for="nameGame">Nom du jeux</label>
+            <input type="text" id="nameGame" name="nameGame">
+        </p>
+
+        <p>
+            <label for="console">Console</label>
+            <input type="text" id="console" name="console">
+        </p>
+
+            <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
