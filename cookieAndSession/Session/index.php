@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="home.php" method="POST">
+    <form action="infosToDatabase.php" method="POST">
         <p>
             <label for="nom">Nom</label>
             <input type="text" id="nom" name="nom">
