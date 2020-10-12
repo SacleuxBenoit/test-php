@@ -13,8 +13,8 @@
         </p>
 
         <p>
-            <label for="nom">Nom</label>
-            <input type="text" id="nom" name="nom">
+            <label for="prenom">prenom</label>
+            <input type="text" id="prenom" name="prenom">
         </p>
 
         <input type="submit" value="Submit">
