@@ -10,7 +10,7 @@ session_start();
 </head>
 <body>
     <?php
-        echo " <h3> Hello " . $_SESSION['nom'] . " " . $_SESSION['prenom'] . "</h3>";
+        echo " <h3> Hello " . htmlspecialchars($_SESSION['nom'])  . " " .  htmlspecialchars($_SESSION['prenom']) . "</h3>";
     ?>
 </body>
 </html>
