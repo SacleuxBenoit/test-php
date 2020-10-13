@@ -1,8 +1,5 @@
 <?php
 session_start();
-
-$_SESSION['nom'] = $_POST['nom'];
-$_SESSION['prenom'] = $_POST['prenom'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
