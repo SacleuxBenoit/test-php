@@ -5,8 +5,11 @@ class Personnage{
     private $_experience = 0;
     private $_damage = 0;
 
-    public function damage(){
-        // Do something
+    public function sayHi(){
+        echo "Hello";
     }
 }
+
+$perso = new Personnage;
+$perso->sayHi();
 ?>
