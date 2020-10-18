@@ -16,10 +16,15 @@ class Personnage{
     public function getExpe(){
         $this->_experience = $this->_experience + 1;
     }
+
+    public function looseExpe(){
+        $this->_experience = $this->_experience - 1;
+    }
+
 }
 
 $perso = new Personnage;
 $perso->sayHi();
-$perso->getExpe();
 $perso->displayExpe();
+$perso->looseExpe();
 ?>
