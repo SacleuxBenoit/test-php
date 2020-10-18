@@ -24,7 +24,11 @@ class Personnage{
 }
 
 $perso = new Personnage;
+$secondPerso = new Personnage;
+
 $perso->sayHi();
 $perso->displayExpe();
 $perso->looseExpe();
+$secondPerso->sayHi();
+$secondPerso->getExpe();
 ?>
