@@ -12,4 +12,13 @@ class Personnage{
         $this->_exp = $this->_exp + 1;
     }
 }
+
+$perso1 = new Personnage;
+$perso2 = new Personnage;
+
+$perso1->hit($perso2);
+$perso1->winExp();
+
+$perso2->hit($perso1);
+$perso2->winExp();
 ?>
