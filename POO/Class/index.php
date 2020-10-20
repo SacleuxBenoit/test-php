@@ -2,7 +2,7 @@
 class Personnage{
     private $_damage;
     private $_exp;
-    private $strength;
+    private $_strength;
 
     public function hit($persoToHit){
         $persoToHit->_damage += $this->_strength;
