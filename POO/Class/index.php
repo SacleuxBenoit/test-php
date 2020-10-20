@@ -5,7 +5,7 @@ class Personnage{
     private $strength;
 
     public function hit($persoToHit){
-        $persoToHit->_damage += $this->_force;
+        $persoToHit->_damage += $this->_strength;
     }
 
     public function winExp(){
