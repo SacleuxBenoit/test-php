@@ -4,13 +4,25 @@ class Personnage{
     private $_exp;
     private $_strength;
 
-    public function hit(Personnage $persoToHit){
-        $persoToHit->_damage += $this->_strength;
-    }
+        public function hit(Personnage $persoToHit){
+            $persoToHit->_damage += $this->_strength;
+        }
 
-    public function winExp(){
-        $this->_exp = $this->_exp + 1;
-    }
+        public function winExp(){
+            $this->_exp = $this->_exp + 1;
+        }
+
+        public function damage(){
+            return $this->_damage;
+        }
+
+        public function exp(){
+            return $this->_exp;
+        }
+
+        public function strength(){
+            return $this->_strength;
+        }
 }
 
 $perso1 = new Personnage;
