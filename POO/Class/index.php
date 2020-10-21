@@ -12,7 +12,7 @@ class Personnage{
             $this->_exp = $this->_exp + 1;
         }
 
-        public function damage(){
+/*        public function damage(){
             return $this->_damage;
         }
 
@@ -22,6 +22,20 @@ class Personnage{
 
         public function strength(){
             return $this->_strength;
+        }
+*/
+
+        public function setStrength($strength){
+            if(!is_int($strength)){
+                trigger_error('The strength must be an int', E_USER_WARNING);
+                return;
+            }
+
+            if($strength > 200){
+                trigger_error('the strength must be under 200', E_USER_WARNING);
+                return;
+            }
+            $this->_strength = $strength;
         }
 }
 
