@@ -37,6 +37,18 @@ class Personnage{
             }
             $this->_strength = $strength;
         }
+
+        public function setExp($exp){
+            if(!is_int($exp)){
+                trigger_error('The exp must be an int', E_USER_WARNING);
+                return;
+            }
+            if($exp > 100){
+                trigger_error('the exp must be under 100', E_USER_WARNING);
+                return;
+            }
+            $this->_exp = $exp;
+        }
 }
 
 $perso1 = new Personnage;
