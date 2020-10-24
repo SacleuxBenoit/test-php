@@ -4,6 +4,13 @@ class Personnage{
     private $_exp;
     private $_strength;
 
+        public function __construct($strength, $damage){
+        echo "test with the constructor";
+        $this->setStrength($strength);
+        $this->setExp($damage);
+        $this->_exp = 1;
+    }
+
         public function hit(Personnage $persoToHit){
             $persoToHit->_damage += $this->_strength;
         }
@@ -52,8 +59,8 @@ class Personnage{
 
 }
 
-$perso1 = new Personnage;
-$perso2 = new Personnage;
+$perso1 = new Personnage(5, 4);
+$perso2 = new Personnage(2,3);
 
 // Perso 1
 $perso1->setStrength(5);
