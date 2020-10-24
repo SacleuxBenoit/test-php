@@ -55,9 +55,15 @@ class Personnage{
 $perso1 = new Personnage;
 $perso2 = new Personnage;
 
+// Perso 1
+$perso1->setStrength(5);
+$perso1->setExp(2);
 $perso1->hit($perso2);
 $perso1->winExp();
 
+// Perso 2
+$perso2->setStrength(4);
+$perso2->setExp(3);
 $perso2->hit($perso1);
 $perso2->winExp();
 
