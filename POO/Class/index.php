@@ -77,4 +77,9 @@ $perso2->winExp();
 echo 'Le personnage 1 a ', $perso1->strength(), ' de force, contrairement au personnage 2 qui a ', $perso2->strength(), ' de force.<br />';
 echo 'Le personnage 1 a ', $perso1->exp(), ' d\'expérience, contrairement au personnage 2 qui a ', $perso2->exp(), ' d\'expérience.<br />';
 echo 'Le personnage 1 a ', $perso1->damage(), ' de dégâts, contrairement au personnage 2 qui a ', $perso2->damage(), ' de dégâts.<br />';
+
+/*Exemple for import : 
+    require 'fileOfClass.php';
+    $name = new fileOfClass;
+*/
 ?>
