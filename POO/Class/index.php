@@ -4,6 +4,10 @@ class Personnage{
     private $_exp;
     private $_strength;
 
+    const SMALL_STRENGTH = 30;
+    const MEDIUM_STRENGTH = 50;
+    const BIG_STRENGTH = 70;
+
         public function __construct($strength, $damage){
         echo "test with the constructor";
         $this->setStrength($strength);
