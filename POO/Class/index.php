@@ -40,7 +40,11 @@ class Personnage{
             if(!is_int($strength)){
                 trigger_error('The strength must be an int', E_USER_WARNING);
                 return;
+                
+            if(in_array($strength, [self::SMALL_STRENGTH, self::MEDIUM_STRENGTH, self::BIG_STRENGTH])){
+                $this->_strength = $strength;
             }
+        }
 
             if($strength > 200){
                 trigger_error('the strength must be under 200', E_USER_WARNING);
@@ -65,6 +69,7 @@ class Personnage{
 
 $perso1 = new Personnage(5, 4);
 $perso2 = new Personnage(2,3);
+$player = new Personnage(Personnage::MEDIUM_STRENGTH);
 
 // Perso 1
 $perso1->setStrength(5);
