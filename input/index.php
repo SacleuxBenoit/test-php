@@ -9,5 +9,14 @@
     <?php
         include('connection_database.php');
     ?>
+
+    <form action="addToDatabase.php" method="post">
+        <p>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+        </p>
+
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
