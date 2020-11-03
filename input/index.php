@@ -12,8 +12,8 @@
 
     <form action="addToDatabase.php" method="post">
         <p>
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name">
+            <label for="nameInput">Name</label>
+            <input type="text" name="nameInput" id="nameInput">
         </p>
 
         <input type="submit" value="Submit">
