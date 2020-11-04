@@ -19,3 +19,4 @@
 *   [Cookie](cookieAndSession) test sur l'utilisation des cookies
 *   [POO](POO)
     *   [Class](POO/Class)
+*   [input](input) Test sur l'envoi de données avec plusieurs types d'input.
