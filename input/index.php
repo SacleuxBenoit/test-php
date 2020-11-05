@@ -11,16 +11,17 @@
     ?>
 
     <form action="addToDatabase.php" method="post">
-           Send Input to database
+        <!--
+           <p>Send Input to database</p> 
 
         <p>
             <label for="nameInput">Name</label>
             <input type="text" name="nameInput" id="nameInput">
         </p>
 
-                Send Input type radio to database
+            <p>Send Input type radio to database</p> 
 
-        <h1>Who are you ?</h1>
+            <h1>Who are you ?</h1>
 
         <p>
             <label for="male">Male</label>
@@ -36,7 +37,11 @@
             <label for="robot">Robot</label>
             <input type="radio" name="gender" id="robot" value="robot">
         </p>
-    
+-->
+        <p>
+            <label for="game">Game :</label>
+            <input type="text" name="game" id="game" value="game">
+        </p>
 
         <input type="submit" value="Submit">
     </form>

@@ -10,5 +10,15 @@ if(!empty($_POST['nameInput']) && !empty($_POST['gender'])){
     $sendInput->execute();
     header('Location: index.php');
 }
+    
+if(!empty($_POST['game'])){
+    $game = $_POST['game'];
+    $selectGame = $bdd->query('SELECT * FROM game');
+    $selectGame->execute();
+
+    while($displayGame = $selectGame->fetch()){
+        echo "test";
+    }
+}
 
 ?>
