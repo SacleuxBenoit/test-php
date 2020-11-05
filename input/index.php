@@ -11,7 +11,7 @@
     ?>
 
     <form action="addToDatabase.php" method="post">
-    <!--        Send Input to database
+           Send Input to database
 
         <p>
             <label for="nameInput">Name</label>
@@ -36,7 +36,7 @@
             <label for="robot">Robot</label>
             <input type="radio" name="gender" id="robot" value="robot">
         </p>
-    -->
+    
 
         <input type="submit" value="Submit">
     </form>

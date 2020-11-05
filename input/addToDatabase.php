@@ -3,19 +3,11 @@ include('connection_database.php');
 
 //  Send Input to database
 
-if(!empty($_POST['nameInput'])){
-    $sendInput = $bdd->prepare('INSERT INTO input(inputResult) VALUES(:nameInput)');
+if(!empty($_POST['nameInput']) && !empty($_POST['gender'])){
+    $sendInput = $bdd->prepare('INSERT INTO input(inputResult,radioResult) VALUES(:nameInput, :gender)');
     $sendInput->bindParam(':nameInput', $_POST['nameInput']);
+    $sendInput->bindParam(':gender', $_POST['gender']);
     $sendInput->execute();
-    header('Location: index.php');
-}
-
-// Send input type radio to database
-
-if(!empty($_POST['gender'])){
-    $sendRadio = $bdd->prepare('INSERT INTO input(radioResult) VALUES(:gender)');
-    $sendRadio->bindParam(':gender', $_POST['gender']);
-    $sendRadio->execute();
     header('Location: index.php');
 }
 
