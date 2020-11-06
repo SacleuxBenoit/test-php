@@ -1,7 +1,7 @@
 <?php
 include('connection_database.php');
 
-//  Send Input to database
+//  Send Input  && input type radio to database
 
 if(!empty($_POST['nameInput']) && !empty($_POST['gender'])){
     $sendInput = $bdd->prepare('INSERT INTO input(inputResult,radioResult) VALUES(:nameInput, :gender)');
@@ -17,7 +17,7 @@ if(!empty($_POST['game'])){
     $selectGame->execute();
 
     while($displayGame = $selectGame->fetch()){
-        echo "test";
+        echo $displayGame['game'] . '<br>';
     }
 }
 
