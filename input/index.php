@@ -37,10 +37,15 @@
             <label for="robot">Robot</label>
             <input type="radio" name="gender" id="robot" value="robot">
         </p>
--->
+
         <p>
             <label for="game">Game :</label>
             <input type="text" name="game" id="game" value="game">
+        </p> -->
+
+        <p>
+            <label for="date">Date :</label>
+            <input type="date">
         </p>
 
         <input type="submit" value="Submit">
