@@ -45,7 +45,7 @@
 
         <p>
             <label for="date">Date :</label>
-            <input type="date">
+            <input type="date" id="date" name="date">
         </p>
 
         <input type="submit" value="Submit">
