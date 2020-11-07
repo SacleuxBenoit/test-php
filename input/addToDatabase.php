@@ -21,4 +21,7 @@ if(!empty($_POST['game'])){
     }
 }
 
+    $sendDate = $bdd->prepare('INSERT INTO input(dateResult) VALUES(:dateResult)');
+    $sendDate->bindParam(':dateResult',$_POST['date'],PDO::PARAM_STR);
+    $sendDate->execute();
 ?>
