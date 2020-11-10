@@ -27,4 +27,12 @@ if(!empty($_POST['date'])){
     $sendDate->execute();
 }
 
+/*
+$selectDate = $bdd->prepare('SELECT * FROM input WHERE lundi = :day');
+$selectDate->bindParam(':day', $_POST['day']);
+$selectDate->execute();
+
+while($displayGame = $selectDate->fetch()){
+    echo $displayGame['lundi'];
+} */
 ?>
