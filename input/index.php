@@ -41,12 +41,24 @@
         <p>
             <label for="game">Game :</label>
             <input type="text" name="game" id="game" value="game">
-        </p> -->
+        </p> 
 
         <p>
             <label for="date">Date :</label>
             <input type="date" id="date" name="date">
-        </p>
+        </p> -->
+
+        <label for="day">Choose a day :</label>
+
+        <select name="day" id="day">
+            <option value="Lundi">Lundi</option>
+            <option value="Mardi">Mardi</option>
+            <option value="Mercredi">Mercredi</option>
+            <option value="Jeudi">Jeudi</option>
+            <option value="Vendredi">Vendredi</option>
+            <option value="Samedi">Samedi</option>
+            <option value="Dimanche">Dimanche</option>
+        </select>
 
         <input type="submit" value="Submit">
     </form>
