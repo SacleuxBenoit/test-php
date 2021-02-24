@@ -8,6 +8,7 @@ include('hide.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -35,7 +36,7 @@ include('hide.php');
         while($display_comment = $get_comments->fetch()){
             ?>
                 <div>
-                <p><?php echo $display_comment['auteur'] ?></p>
+                <p>Auteur : <?php echo $display_comment['auteur'] ?></p>
                 <p><?php echo $display_comment['commentaire'] ?></p>
                 </div>
             <?php
