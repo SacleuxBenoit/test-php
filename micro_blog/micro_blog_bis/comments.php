@@ -25,5 +25,21 @@ include('hide.php');
         <p><?php echo htmlspecialchars($content['contenu']) ?></p>
     </div>
     
+    <p>Commentaires :</p>
+
+    <?php 
+        $get_ticket->closeCursor();
+        $get_comments = $bdd->prepare('SELECT id_billet,auteur,commentaire FROM comments WHERE id_billet = ?');
+        $get_comments->execute(array($_GET['billet']));
+        
+        while($display_comment = $get_comments->fetch()){
+            ?>
+                <div>
+                <p><?php echo $display_comment['auteur'] ?></p>
+                <p><?php echo $display_comment['commentaire'] ?></p>
+                </div>
+            <?php
+        }
+    ?> 
 </body>
 </html>
