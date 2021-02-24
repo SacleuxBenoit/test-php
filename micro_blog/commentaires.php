@@ -50,7 +50,7 @@ include('hide.php');
 <?php
     $recover_tickets->closeCursor();
 
-    $recover_comments = $bdd->prepare('SELECT auteur, commentaire, DATE_FORMAT(date_commentaire, \'%d/%m/%Y à %Hh%imin%ss\') AS date_commentaire_fr FROM commentaires WHERE id_billet = ? ORDER BY date_commentaire');
+    $recover_comments = $bdd->prepare('SELECT auteur, commentaire FROM commentaires WHERE id_billet = ?');
     $recover_comments->execute(array($_GET['billet']));
 
     while($donnees = $recover_comments->fetch()){
