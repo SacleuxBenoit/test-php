@@ -14,14 +14,16 @@ include('hide.php');
     <?php
         include('connection_database.php');
 
-        $get_ticket = $bdd->query('SELECT titre,contenu FROM billets');
+        $get_ticket = $bdd->query('SELECT id,titre,contenu FROM billets');
 
         while($content = $get_ticket->fetch()){
         ?>
             <div>
-                <h3><?php echo $content['titre'] ?></h3>
+                <h3><?php echo htmlspecialchars($content['titre']) ?></h3>
 
-                <p><?php echo $content['contenu'] ?></p>
+                <p><?php echo htmlspecialchars($content['contenu']) ?></p>
+
+                <p><a href="comments.php?billet=<?php echo htmlspecialchars($content['id']);?>">see more</a></p>
             </div>
         <?php
         }
