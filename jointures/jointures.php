@@ -13,12 +13,15 @@ include('hide.php');
 <body>
     <?php 
     try{
-        $bdd = new PDO('mysql:host=localhost;dbname=jointuresBDD;charset=utf8', 'root', $_SESSION['pass']);
+        $bdd = new PDO('mysql:host=localhost;dbname=testJointures;charset=utf8', 'root', $_SESSION['pass']);
     }
     catch(Exception $e){
         die('Erreur : '.$e->getMessage());
     }
 
+    $firstTest = $bdd->query('SELECT jeux_video.nom, proprietaires.prenom
+                              FROM jeux_video,proprietaires 
+                              WHERE jeux_video.ID_proprietaires = proprietaires.ID');
     ?>
 </body>
 </html>
