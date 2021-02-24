@@ -13,6 +13,18 @@ include('hide.php');
 <body>
     <?php
         include('connection_database.php');
+
+        $get_ticket = $bdd->query('SELECT titre,contenu FROM billets');
+
+        while($content = $get_ticket->fetch()){
+        ?>
+            <div>
+                <h3><?php echo $content['titre'] ?></h3>
+
+                <p><?php echo $content['contenu'] ?></p>
+            </div>
+        <?php
+        }
     ?>  
 </body>
 </html>
