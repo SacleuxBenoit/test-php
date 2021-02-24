@@ -19,12 +19,12 @@ include('hide.php');
 
         while($content = $get_ticket->fetch()){
         ?>
-            <div>
+            <div class="container">
                 <h3><?php echo htmlspecialchars($content['titre']) ?></h3>
 
-                <p><?php echo htmlspecialchars($content['contenu']) ?></p>
+                <p class="content"><?php echo htmlspecialchars($content['contenu']) ?></p>
 
-                <p><a href="comments.php?billet=<?php echo htmlspecialchars($content['id']);?>">see more</a></p>
+                <p class="content"><a href="comments.php?billet=<?php echo htmlspecialchars($content['id']);?>">see more</a></p>
             </div>
         <?php
         }

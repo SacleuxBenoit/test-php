@@ -35,8 +35,8 @@ include('hide.php');
         
         while($display_comment = $get_comments->fetch()){
             ?>
-                <div>
-                <p>Auteur : <?php echo $display_comment['auteur'] ?></p>
+                <div class="comments">
+                <p><strong><?php echo $display_comment['auteur']?></strong></p>
                 <p><?php echo $display_comment['commentaire'] ?></p>
                 </div>
             <?php
