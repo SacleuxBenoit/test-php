@@ -46,15 +46,15 @@ include('infos_admin_database.php');
     <div>
         <h3>Ajouter un commentaire</h3>
         
-        <form action="addComments_database.php" method="POST">
+        <form action="addComments_database.php?billet=<?php echo $_GET['billet']?>" method="POST">
             <p>
-                <label for="Author">Auteur :</label>
-                <input type="text" name="Author" id="Author">
+                <label for="author">Auteur :</label>
+                <input type="text" name="author" id="author">
             </p>
 
             <p>
-                <label for="Comments">Commentaire :</label>
-                <input type="text" name="Comments" id="Comments">
+                <label for="comments">Commentaire :</label>
+                <input type="text" name="comments" id="comments">
             </p>
 
             <input type="submit" value="Submit">
