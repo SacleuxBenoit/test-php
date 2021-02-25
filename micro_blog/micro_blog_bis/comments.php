@@ -41,6 +41,24 @@ include('hide.php');
                 </div>
             <?php
         }
-    ?> 
+    ?>
+
+    <div>
+        <h3>Ajouter un commentaire</h3>
+        
+        <form action="addComments_database.php" method="POST">
+            <p>
+                <label for="Author">Auteur :</label>
+                <input type="text" name="Author" id="Author">
+            </p>
+
+            <p>
+                <label for="Comments">Commentaire :</label>
+                <input type="text" name="Comments" id="Comments">
+            </p>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div> 
 </body>
 </html>
