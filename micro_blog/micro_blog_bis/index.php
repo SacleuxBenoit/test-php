@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('hide.php');
+include('infos_admin_database.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
