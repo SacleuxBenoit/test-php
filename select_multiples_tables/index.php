@@ -13,6 +13,10 @@ include('connection_database.php');
 </head>
 <body>
     <?php
+        $get_data = $bdd->query('SELECT * FROM firstTable,secondTable');
+        while($display_data = $get_data->fetch()){
+            echo '<p>' . $display_data['firstTitle'] . " " . $display_data['secondTitle'] . '</p>';
+        };
 
     ?>
 </body>
