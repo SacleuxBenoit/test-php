@@ -3,7 +3,7 @@ include('connection_database.php');
 
 //  Send Input  && input type radio to database
 
-if(!empty($_POST['nameInput']) && !empty($_POST['gender'])){
+/* i/f(!empty($_POST['nameInput']) && !empty($_POST['gender'])){
     $sendInput = $bdd->prepare('INSERT INTO input(inputResult,radioResult) VALUES(:nameInput, :gender)');
     $sendInput->bindParam(':nameInput', $_POST['nameInput']);
     $sendInput->bindParam(':gender', $_POST['gender']);
@@ -27,7 +27,7 @@ if(!empty($_POST['date'])){
     $sendDate->execute();
 }
 
-/*
+
 $selectDate = $bdd->prepare('SELECT * FROM input WHERE lundi = :day');
 $selectDate->bindParam(':day', $_POST['day']);
 $selectDate->execute();

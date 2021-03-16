@@ -46,7 +46,7 @@
         <p>
             <label for="date">Date :</label>
             <input type="date" id="date" name="date">
-        </p> -->
+        </p>
 
         <label for="day">Choose a day :</label>
 
@@ -58,7 +58,7 @@
             <option value="Vendredi">Vendredi</option>
             <option value="Samedi">Samedi</option>
             <option value="Dimanche">Dimanche</option>
-        </select>
+        </select> -->
 
         <input type="submit" value="Submit">
     </form>
