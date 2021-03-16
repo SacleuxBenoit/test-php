@@ -47,18 +47,18 @@
             <label for="date">Date :</label>
             <input type="date" id="date" name="date">
         </p>
-
-        <label for="day">Choose a day :</label>
-
+-->
+        <label for="content">Choose a day :</label>
+        <input type="text" name="content" id="content">
         <select name="day" id="day">
-            <option value="Lundi">Lundi</option>
-            <option value="Mardi">Mardi</option>
-            <option value="Mercredi">Mercredi</option>
-            <option value="Jeudi">Jeudi</option>
-            <option value="Vendredi">Vendredi</option>
-            <option value="Samedi">Samedi</option>
-            <option value="Dimanche">Dimanche</option>
-        </select> -->
+            <option value="lundi">Lundi</option>
+            <option value="mardi">Mardi</option>
+            <option value="mercredi">Mercredi</option>
+            <option value="jeudi">Jeudi</option>
+            <option value="vendredi">Vendredi</option>
+            <option value="samedi">Samedi</option>
+            <option value="dimanche">Dimanche</option>
+        </select> 
 
         <input type="submit" value="Submit">
     </form>

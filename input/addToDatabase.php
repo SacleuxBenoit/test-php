@@ -21,11 +21,10 @@ if(!empty($_POST['game'])){
     }
 }
 
-if(!empty($_POST['date'])){
+
     $sendDate = $bdd->prepare('INSERT INTO input(dateResult) VALUES(:dateResult)');
-    $sendDate->bindParam(':dateResult',$_POST['date'],PDO::PARAM_STR);
+    $sendDate->bindParam(':dateResult',$_POST['content'],PDO::PARAM_STR);
     $sendDate->execute();
-}
 
 
 $selectDate = $bdd->prepare('SELECT * FROM input WHERE lundi = :day');
@@ -34,5 +33,60 @@ $selectDate->execute();
 
 while($displayGame = $selectDate->fetch()){
     echo $displayGame['lundi'];
-} */
+} 
+
+// Another test with dropDown
+
+    $sendDatabase = $bdd->prepare('INSERT INTO dropdown(:week) VALUES(:content)');
+    $sendDatabase->bindParam(':week', $_POST['day']);
+    $sendDatabase->bindParam(':content', $_POST['content']);
+    $sendDatabase->execute();
+
+        $sendDatabase = $bdd->prepare('INSERT INTO dropdown(lundi) VALUES(:content)');
+    $sendDatabase->bindParam(':content', $_POST['content']);
+    $sendDatabase->execute();
+ 
+
+    // NOT WORKING
+    $sendDatabase = $bdd->prepare('INSERT INTO dropdown(:week) VALUES(:content)');
+    $sendDatabase->bindParam(':week', $_POST['day']);
+    $sendDatabase->bindParam(':content', $_POST['content']);
+    $sendDatabase->execute();
+       */
+
+       if($_POST['day'] == 'lundi'){
+        $sendDatabase = $bdd->prepare('INSERT INTO dropdown(lundi) VALUES(:content)');
+        $sendDatabase->bindParam(':content', $_POST['content']);
+        $sendDatabase->execute();
+       }
+       else if($_POST['day'] == 'mardi'){
+        $sendDatabase = $bdd->prepare('INSERT INTO dropdown(mardi) VALUES(:content)');
+        $sendDatabase->bindParam(':content', $_POST['content']);
+        $sendDatabase->execute();
+       }
+       else if($_POST['day'] == 'mercredi'){
+        $sendDatabase = $bdd->prepare('INSERT INTO dropdown(mercredi) VALUES(:content)');
+        $sendDatabase->bindParam(':content', $_POST['content']);
+        $sendDatabase->execute();
+       }
+       else if($_POST['day'] == 'jeudi'){
+        $sendDatabase = $bdd->prepare('INSERT INTO dropdown(jeudi) VALUES(:content)');
+        $sendDatabase->bindParam(':content', $_POST['content']);
+        $sendDatabase->execute();
+       }
+       else if($_POST['day'] == 'vendredi'){
+        $sendDatabase = $bdd->prepare('INSERT INTO dropdown(vendredi) VALUES(:content)');
+        $sendDatabase->bindParam(':content', $_POST['content']);
+        $sendDatabase->execute();
+       }
+       else if($_POST['day'] == 'samedi'){
+        $sendDatabase = $bdd->prepare('INSERT INTO dropdown(samedi) VALUES(:content)');
+        $sendDatabase->bindParam(':content', $_POST['content']);
+        $sendDatabase->execute();
+       }
+       else if($_POST['day'] == 'dimanche'){
+        $sendDatabase = $bdd->prepare('INSERT INTO dropdown(dimanche) VALUES(:content)');
+        $sendDatabase->bindParam(':content', $_POST['content']);
+        $sendDatabase->execute();
+       }
 ?>
