@@ -80,6 +80,17 @@ session_start();
         echo "Le prix total pour la console " . $total_price_game['console'] . " est de : " . $total_price_game['price_game_console'] . " euros." . '<br />';
     }
 
+    // SQL DISTINCT
+
+    echo "this is a test with SQL DISTINCT";
+
+    $testSqlDistinct = $bdd->query('SELECT DISTINCT email FROM doublons');
+
+    while($show_testSqlDistinct = $testSqlDistinct->fetch()){
+        echo '<br>' . $show_testSqlDistinct['email'];
+    }
+
+
     ?>
     
    
