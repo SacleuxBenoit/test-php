@@ -10,7 +10,7 @@
     <form action="./create_username.php" method="post">
         <label for="username">username</label>
         <p>
-            <input type="text" name="username" id="username" placeholder="username...">
+            <input type="text" name="username" id="username" placeholder="username..." required>
         </p>
 
         <input type="submit" value="Submit">
